@@ -21,6 +21,6 @@ export class SelectOperator extends Interaction {
     }
 
     toString(): string {
-        return `#actor selects ${ this.value } from ${ SuperCalculatorWidget.operatorDropdown }`;
+        return `#actor selects the ${ this.value } operator`;
     }
 }

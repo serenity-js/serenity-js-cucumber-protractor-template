@@ -5,7 +5,7 @@ import { SuperCalculatorWidget } from './ui';
 export const EnterRightSideOperand = {
 
     of: (value: string | number) =>
-        Task.where(`#actor enters left operand of ${ value }`,
+        Task.where(`#actor enters a right operand of ${ value }`,
             Enter.theValue(value).into(SuperCalculatorWidget.rightOperandInput),
         ),
 };
