@@ -1,0 +1,19 @@
+# don't build tags, it's redundant
+if: tag IS blank
+
+sudo: false
+language: node_js
+
+notifications:
+  email: false
+node_js:
+  - '8'
+  - '10'
+services:
+  - xvfb
+addons:
+  chrome: stable
+
+script:
+  - npm run lint
+  - npm test

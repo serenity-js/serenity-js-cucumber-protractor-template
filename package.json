@@ -1,0 +1,58 @@
+{
+  "name": "acceptance-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "serenity-bdd update",
+    "clean": "rimraf target",
+    "test": "failsafe clean test:execute test:report",
+    "test:execute": "protractor ./protractor.conf.js",
+    "test:execute:wip": "protractor ./protractor.conf.js --cucumberOpts.tags=@wip",
+    "test:report": "serenity-bdd run --features ./features",
+    "wip": "failsafe clean test:execute:wip test:report",
+    "lint": "tslint --project tsconfig.json --format stylish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serenity-js/serenity-js-cucumber-protractor-template.git"
+  },
+  "keywords": [
+    "serenity-js",
+    "bdd",
+    "cucumber",
+    "protractor",
+    "testing"
+  ],
+  "author": "Jan Molak <jan.molak@smartcodeltd.co.uk>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/serenity-js/serenity-js-cucumber-protractor-template/issues"
+  },
+  "homepage": "http://serenity-js.org",
+  "engines": {
+    "node": ">= 10",
+    "npm": ">= 6"
+  },
+  "dependencies": {
+    "@serenity-js/assertions": "next",
+    "@serenity-js/core": "next",
+    "@serenity-js/cucumber": "next",
+    "@serenity-js/protractor": "next",
+    "@serenity-js/rest": "next",
+    "@serenity-js/serenity-bdd": "next",
+    "@types/cucumber": "^4.0.7",
+    "@types/node": "^10.14.20",
+    "axios": "^0.19.0",
+    "chromedriver": "^77.0.0",
+    "cucumber": "^5.1.0",
+    "is-ci": "^2.0.0",
+    "npm-failsafe": "^0.4.1",
+    "protractor": "^5.4.2",
+    "rimraf": "^3.0.0",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0",
+    "tslint-microsoft-contrib": "^6.2.0",
+    "typescript": "^3.6.3"
+  }
+}
