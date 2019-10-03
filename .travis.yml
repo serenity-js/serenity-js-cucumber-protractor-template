@@ -3,6 +3,8 @@ if: tag IS blank
 
 sudo: false
 language: node_js
+jdk:
+  - oraclejdk8
 
 notifications:
   email: false
