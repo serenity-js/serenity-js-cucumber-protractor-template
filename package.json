@@ -38,6 +38,7 @@
     "@serenity-js/assertions": "next",
     "@serenity-js/core": "next",
     "@serenity-js/cucumber": "next",
+    "@serenity-js/console-reporter": "next",
     "@serenity-js/protractor": "next",
     "@serenity-js/rest": "next",
     "@serenity-js/serenity-bdd": "next",
