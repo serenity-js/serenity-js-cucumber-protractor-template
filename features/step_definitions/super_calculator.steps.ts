@@ -1,8 +1,9 @@
 import { Ensure, equals } from '@serenity-js/assertions';
-import { WithStage } from '@serenity-js/core';
+import { Actor, actorCalled, actorInTheSpotlight, engage, WithStage } from '@serenity-js/core';
 import { Navigate } from '@serenity-js/protractor';
-import { Given, Then, When } from 'cucumber';
+import { Before, Given, Then, When } from 'cucumber';
 import {
+    Actors,
     CalculationResult,
     ConfirmCalculation,
     EnterLeftSideOperand,
@@ -10,23 +11,22 @@ import {
     SelectOperator,
 } from '../support/screenplay';
 
-Given(/(.*) decides to use the Super Calculator/, function (this: WithStage, actorName: string) {
-    return this.stage.theActorCalled(actorName).attemptsTo(
-        Navigate.to('/protractor-demo/'),
-    );
-});
+Before(() => engage(new Actors()));
 
-When(/(?:he|she|they) (?:adds?) (\d+) and (\d+)/, function (this: WithStage, leftSideOperand: string, rightSideOperand: string) {
-    return this.stage.theActorInTheSpotlight().attemptsTo(
+Given(/(.*) decides to use the Super Calculator/, (actorName: string) =>
+    actorCalled(actorName).attemptsTo(
+        Navigate.to('/protractor-demo/'),
+    ));
+
+When(/(?:he|she|they) (?:adds?) (\d+) and (\d+)/, (leftSideOperand: string, rightSideOperand: string) =>
+    actorInTheSpotlight().attemptsTo(
         EnterLeftSideOperand.of(leftSideOperand),
         SelectOperator.withSymbol('+'),
         EnterRightSideOperand.of(rightSideOperand),
         ConfirmCalculation(),
-    );
-});
+    ));
 
-Then(/(?:he|she|they) should see that the result is (.*)/, function (this: WithStage, expectedResult: string) {
-    return this.stage.theActorInTheSpotlight().attemptsTo(
+Then(/(?:he|she|they) should see that the result is (.*)/, (expectedResult: string) =>
+    actorInTheSpotlight().attemptsTo(
         Ensure.that(CalculationResult(), equals(expectedResult)),
-    );
-});
+    ));
