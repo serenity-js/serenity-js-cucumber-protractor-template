@@ -43,7 +43,7 @@
     "@serenity-js/rest": "^2.1.2",
     "@serenity-js/serenity-bdd": "^2.1.2",
     "@types/cucumber": "^6.0.1",
-    "@types/node": "^12.12.26",
+    "@types/node": "^12.12.27",
     "axios": "^0.19.2",
     "chromedriver": "^80.0.0",
     "cucumber": "^6.0.5",
