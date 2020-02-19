@@ -41,7 +41,7 @@
     "@serenity-js/console-reporter": "^2.1.5",
     "@serenity-js/protractor": "^2.2.0",
     "@serenity-js/rest": "^2.1.2",
-    "@serenity-js/serenity-bdd": "^2.1.2",
+    "@serenity-js/serenity-bdd": "^2.1.5",
     "@types/cucumber": "^6.0.1",
     "@types/node": "^12.12.28",
     "axios": "^0.19.2",
