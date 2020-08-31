@@ -38,7 +38,7 @@
     "@serenity-js/assertions": "^2.14.0",
     "@serenity-js/core": "^2.15.0",
     "@serenity-js/cucumber": "^2.14.0",
-    "@serenity-js/console-reporter": "^2.14.0",
+    "@serenity-js/console-reporter": "^2.15.0",
     "@serenity-js/protractor": "^2.14.0",
     "@serenity-js/rest": "^2.14.0",
     "@serenity-js/serenity-bdd": "^2.14.0",
