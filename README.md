@@ -1,8 +1,6 @@
 # Serenity/JS Cucumber Protractor Template
 
-[![Build Status](https://travis-ci.com/serenity-js/serenity-js-cucumber-protractor-template.svg?branch=master)](https://travis-ci.com/serenity-js/serenity-js-cucumber-protractor-template)
-
-[![Pipeline Status](https://github.com/serenity-js/serenity-js-cucumber-protractor-template/workflows/Pipeline/badge.svg)](https://github.com/serenity-js/serenity-js-cucumber-protractor-template/actions)
+[![Build Status](https://github.com/serenity-js/serenity-js-cucumber-protractor-template/workflows/build/badge.svg)](https://github.com/serenity-js/serenity-js-cucumber-protractor-template/actions)
 
 Use this [template repository](https://help.github.com/en/articles/creating-a-repository-from-a-template)
 to get started with acceptance testing your web applications using [Serenity/JS](https://serenity-js.org), [Cucumber](https://github.com/cucumber/cucumber-js) and [Protractor](http://www.protractortest.org/).
