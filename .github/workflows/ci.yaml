@@ -1,4 +1,4 @@
-name: Serenity/JS Monorepo Demo CI
+name: Serenity/JS Cucumber Protractor Template CI
 
 on: [push]
 
