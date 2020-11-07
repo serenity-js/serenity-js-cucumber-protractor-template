@@ -48,7 +48,7 @@
     "chromedriver": "^86.0.0",
     "cucumber": "^6.0.5",
     "is-ci": "^2.0.0",
-    "npm-failsafe": "^0.4.1",
+    "npm-failsafe": "^0.4.3",
     "protractor": "^7.0.0",
     "rimraf": "^3.0.2",
     "ts-node": "^9.0.0",
