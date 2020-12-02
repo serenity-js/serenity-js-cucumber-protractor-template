@@ -45,7 +45,7 @@
     "@types/cucumber": "^6.0.1",
     "@types/node": "^14.14.10",
     "axios": "^0.21.0",
-    "chromedriver": "^86.0.0",
+    "chromedriver": "^87.0.1",
     "cucumber": "^6.0.5",
     "is-ci": "^2.0.0",
     "npm-failsafe": "^0.4.3",
