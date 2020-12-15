@@ -20,6 +20,12 @@ jobs:
       - run: npm test
         env:
           CI: true
+      - uses: actions/upload-artifact@v2
+        if: matrix.node-version == '14.x'
+        with:
+          name: Serenity Reports
+          path: |
+            target/site/serenity
 
   automerge:
     name: Auto-merge pull request

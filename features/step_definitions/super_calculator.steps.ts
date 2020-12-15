@@ -1,5 +1,12 @@
 import { Ensure, equals } from '@serenity-js/assertions';
-import { actorCalled, actorInTheSpotlight, engage } from '@serenity-js/core';
+import {
+    actorCalled,
+    actorInTheSpotlight, Answerable,
+    AnswersQuestions,
+    engage,
+    Interaction,
+    UsesAbilities,
+} from '@serenity-js/core';
 import { Navigate } from '@serenity-js/protractor';
 import { Before, Given, Then, When } from 'cucumber';
 import {
@@ -22,6 +29,14 @@ When(/(?:he|she|they) (?:adds?) (\d+) and (\d+)/, (leftSideOperand: string, righ
     actorInTheSpotlight().attemptsTo(
         EnterLeftSideOperand.of(leftSideOperand),
         SelectOperator.withSymbol('+'),
+        EnterRightSideOperand.of(rightSideOperand),
+        ConfirmCalculation(),
+    ));
+
+When(/(?:he|she|they) (?:multiply|multiplies) (\d+) and (\d+)/, (leftSideOperand: string, rightSideOperand: string) =>
+    actorInTheSpotlight().attemptsTo(
+        EnterLeftSideOperand.of(leftSideOperand),
+        SelectOperator.withSymbol('*'),
         EnterRightSideOperand.of(rightSideOperand),
         ConfirmCalculation(),
     ));
