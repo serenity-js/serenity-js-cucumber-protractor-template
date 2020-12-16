@@ -10,7 +10,7 @@
     "test": "failsafe clean test:execute test:report",
     "test:execute": "protractor ./protractor.conf.js",
     "test:wip": "failsafe clean test:execute:wip test:report",
-    "test:execute:wip": "protractor ./protractor.conf.js --cucumberOpts.tags=@wip",
+    "test:wip:execute": "protractor ./protractor.conf.js --cucumberOpts.tags=@wip",
     "test:report": "serenity-bdd run --features ./features",
     "lint": "tslint --project tsconfig.json --format stylish"
   },
