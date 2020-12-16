@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "serenity-bdd update",
+    "start": "todo-app",
     "clean": "rimraf target",
     "test": "failsafe clean test:execute test:report",
     "test:execute": "protractor ./protractor.conf.js",
+    "test:wip": "failsafe clean test:execute:wip test:report",
     "test:execute:wip": "protractor ./protractor.conf.js --cucumberOpts.tags=@wip",
     "test:report": "serenity-bdd run --features ./features",
-    "wip": "failsafe clean test:execute:wip test:report",
     "lint": "tslint --project tsconfig.json --format stylish"
   },
   "repository": {
@@ -35,13 +36,14 @@
     "npm": ">= 6"
   },
   "dependencies": {
-    "@serenity-js/assertions": "^2.19.8",
-    "@serenity-js/core": "^2.19.8",
-    "@serenity-js/cucumber": "^2.19.8",
-    "@serenity-js/console-reporter": "^2.19.8",
-    "@serenity-js/protractor": "^2.19.8",
-    "@serenity-js/rest": "^2.19.8",
-    "@serenity-js/serenity-bdd": "^2.19.8",
+    "@serenity-js/assertions": "^2.19.9",
+    "@serenity-js/core": "^2.19.9",
+    "@serenity-js/cucumber": "^2.19.9",
+    "@serenity-js/console-reporter": "^2.19.9",
+    "@serenity-js/local-server": "^2.19.9",
+    "@serenity-js/protractor": "^2.19.9",
+    "@serenity-js/rest": "^2.19.9",
+    "@serenity-js/serenity-bdd": "^2.19.9",
     "@types/cucumber": "^6.0.1",
     "@types/node": "^14.14.13",
     "axios": "^0.21.0",

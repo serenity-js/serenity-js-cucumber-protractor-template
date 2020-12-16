@@ -1,24 +1,14 @@
 import { Ensure, equals } from '@serenity-js/assertions';
-import {
-    actorCalled,
-    actorInTheSpotlight, Answerable,
-    AnswersQuestions,
-    engage,
-    Interaction,
-    UsesAbilities,
-} from '@serenity-js/core';
+import { actorCalled, actorInTheSpotlight } from '@serenity-js/core';
 import { Navigate } from '@serenity-js/protractor';
-import { Before, Given, Then, When } from 'cucumber';
+import { Given, Then, When } from 'cucumber';
 import {
-    Actors,
     CalculationResult,
     ConfirmCalculation,
     EnterLeftSideOperand,
     EnterRightSideOperand,
     SelectOperator,
 } from '../support/screenplay';
-
-Before(() => engage(new Actors()));
 
 Given(/(.*) decides to use the Super Calculator/, (actorName: string) =>
     actorCalled(actorName).attemptsTo(
