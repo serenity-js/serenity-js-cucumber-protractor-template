@@ -32,6 +32,18 @@ exports.config = {
         ]
     },
 
+    cucumberOpts: {
+        require: [
+            'features/step_definitions/*.ts',
+            'features/support/.serenity.ts',
+        ],
+        'require-module':   [
+            'ts-node/register'
+        ],
+        tags:    ['~@wip'],
+        strict:  false,
+    },
+
     /**
      * If you're interacting with a non-Angular application,
      * uncomment the below onPrepare section,
@@ -40,13 +52,6 @@ exports.config = {
     // onPrepare: function() {
     //     browser.waitForAngularEnabled(false);
     // },
-
-    cucumberOpts: {
-        require: [ 'features/**/*.ts', ],
-        'require-module':   [ 'ts-node/register'],
-        tags:    ['~@wip'],
-        strict:  false,
-    },
 
     capabilities: {
         browserName: 'chrome',

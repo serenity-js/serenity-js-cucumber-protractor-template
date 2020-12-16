@@ -8,7 +8,7 @@ import {
     EnterLeftSideOperand,
     EnterRightSideOperand,
     SelectOperator,
-} from '../support/screenplay';
+} from '../support';
 
 Given(/(.*) decides to use the Super Calculator/, (actorName: string) =>
     actorCalled(actorName).attemptsTo(

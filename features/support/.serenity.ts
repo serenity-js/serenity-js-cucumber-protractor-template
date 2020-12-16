@@ -1,6 +1,6 @@
 import { Before, defineParameterType, setDefaultTimeout } from 'cucumber';
 import { actorCalled, actorInTheSpotlight, engage } from '@serenity-js/core';
-import { Actors } from './screenplay';
+import { Actors } from './Actors';
 
 Before(() => engage(new Actors()));
 
