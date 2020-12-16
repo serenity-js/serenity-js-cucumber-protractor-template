@@ -1,4 +1,4 @@
-Feature: Super Calculator
+Feature: Calculations
 
   In order to learn how to use Serenity/JS with Cucumber and Protractor
   As a Curious Developer
