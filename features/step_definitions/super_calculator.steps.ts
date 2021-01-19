@@ -1,7 +1,7 @@
 import { Ensure, equals } from '@serenity-js/assertions';
 import { actorCalled, actorInTheSpotlight } from '@serenity-js/core';
 import { Navigate } from '@serenity-js/protractor';
-import { Given, Then, When } from 'cucumber';
+import { Given, Then, When } from '@cucumber/cucumber';
 import {
     CalculationResult,
     ConfirmCalculation,
