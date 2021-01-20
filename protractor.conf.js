@@ -25,6 +25,7 @@ exports.config = {
     serenity: {
         runner: 'cucumber',
         crew: [
+            // Learn more at https://serenity-js.org/handbook/reporting/index.html
             ArtifactArchiver.storingArtifactsAt('./target/site/serenity'),
             ConsoleReporter.forDarkTerminals(),
             Photographer.whoWill(TakePhotosOfInteractions),     // or Photographer.whoWill(TakePhotosOfFailures),
