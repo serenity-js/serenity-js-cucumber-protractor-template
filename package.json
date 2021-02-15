@@ -40,7 +40,7 @@
     "@serenity-js/console-reporter": "^2.22.0",
     "@serenity-js/core": "^2.20.1",
     "@serenity-js/cucumber": "^2.22.0",
-    "@serenity-js/protractor": "^2.20.1",
+    "@serenity-js/protractor": "^2.22.0",
     "@serenity-js/serenity-bdd": "^2.22.0",
     "@types/node": "^14.14.28",
     "chromedriver": "^88.0.0",
