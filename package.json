@@ -31,7 +31,7 @@
   },
   "homepage": "http://serenity-js.org",
   "engines": {
-    "node": ">= 10",
+    "node": ">= v10.24.0",
     "npm": ">= 6"
   },
   "dependencies": {
