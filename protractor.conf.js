@@ -28,7 +28,8 @@ exports.config = {
             // Learn more at https://serenity-js.org/handbook/reporting/index.html
             ArtifactArchiver.storingArtifactsAt('./target/site/serenity'),
             ConsoleReporter.forDarkTerminals(),
-            Photographer.whoWill(TakePhotosOfInteractions),     // or Photographer.whoWill(TakePhotosOfFailures),
+            Photographer.whoWill(TakePhotosOfInteractions),     // slower execution, more comprehensive reports
+            // Photographer.whoWill(TakePhotosOfFailures),      // fast execution, screenshots only when tests fail
             new SerenityBDDReporter(),
         ]
     },
