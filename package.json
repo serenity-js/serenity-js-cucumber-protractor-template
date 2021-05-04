@@ -35,7 +35,7 @@
     "npm": "^6 || ^7"
   },
   "dependencies": {
-    "@cucumber/cucumber": "^7.0.0",
+    "@cucumber/cucumber": "^7.2.1",
     "@serenity-js/assertions": "^2.26.2",
     "@serenity-js/console-reporter": "^2.26.2",
     "@serenity-js/core": "^2.26.2",
