@@ -10,12 +10,12 @@ import {
     SelectOperator,
 } from '../support';
 
-Given(/(.*) decides to use the Super Calculator/, (actorName: string) =>
+Given('{word} decides to use the Super Calculator', (actorName: string) =>
     actorCalled(actorName).attemptsTo(
         Navigate.to('/protractor-demo/'),
     ));
 
-When(/(?:he|she|they) (?:adds?) (\d+) and (\d+)/, (leftSideOperand: string, rightSideOperand: string) =>
+When('he/she/they add(s) {int} and {int}', (leftSideOperand: number, rightSideOperand: number) =>
     actorInTheSpotlight().attemptsTo(
         EnterLeftSideOperand.of(leftSideOperand),
         SelectOperator.withSymbol('+'),
@@ -23,7 +23,7 @@ When(/(?:he|she|they) (?:adds?) (\d+) and (\d+)/, (leftSideOperand: string, righ
         ConfirmCalculation(),
     ));
 
-When(/(?:he|she|they) (?:multiply|multiplies) (\d+) and (\d+)/, (leftSideOperand: string, rightSideOperand: string) =>
+When('he/she/they multiply/multiplies {int} and {int}', (leftSideOperand: number, rightSideOperand: number) =>
     actorInTheSpotlight().attemptsTo(
         EnterLeftSideOperand.of(leftSideOperand),
         SelectOperator.withSymbol('*'),
@@ -31,7 +31,7 @@ When(/(?:he|she|they) (?:multiply|multiplies) (\d+) and (\d+)/, (leftSideOperand
         ConfirmCalculation(),
     ));
 
-Then(/(?:he|she|they) should see that the result is (.*)/, (expectedResult: string) =>
+Then('he/she/they should see that the result is {}', (expectedResult: string) =>
     actorInTheSpotlight().attemptsTo(
         Ensure.that(CalculationResult(), equals(expectedResult)),
     ));
