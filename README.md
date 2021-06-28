@@ -6,16 +6,15 @@
 Use this [template repository](https://help.github.com/en/articles/creating-a-repository-from-a-template)
 to get started with acceptance testing your web applications using [Serenity/JS](https://serenity-js.org), [Cucumber](https://github.com/cucumber/cucumber-js) and [Protractor](http://www.protractortest.org/). 
 
-You might also want to have a look at the [Serenity BDD reports](https://serenity-js.github.io/serenity-js-cucumber-protractor-template/) produced by this project.
-
 Learn more:
+- [Serenity BDD reports for this project](https://serenity-js.github.io/serenity-js-cucumber-protractor-template/)
 - [Serenity/JS Website](https://serenity-js.org)
 - [Serenity/JS API Docs](https://serenity-js.org/modules)
 
 ## Prerequisites
 
 To use this project, you'll need:
-- Node.js, a Long-Term Support (LTS) release version 10 or later - [download](https://nodejs.org/en/)
+- Node.js, a Long-Term Support (LTS) release version 12 or later - [download](https://nodejs.org/en/)
 - Java Runtime Environment (JRE) or a Java Development Kit (JDK) version 8 or later - [download](https://adoptopenjdk.net/)
 - Chrome web browser - [download](https://www.google.co.uk/chrome/)
 
