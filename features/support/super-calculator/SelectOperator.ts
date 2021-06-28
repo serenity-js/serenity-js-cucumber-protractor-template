@@ -1,10 +1,11 @@
 import { AnswersQuestions, Interaction, UsesAbilities } from '@serenity-js/core';
 import { by } from 'protractor';
+
 import { SuperCalculatorWidget } from './ui';
 
 export class SelectOperator extends Interaction {
 
-    static withSymbol(symbol: string) {
+    static withSymbol(symbol: string): Interaction {
         return new SelectOperator(symbol);
     }
 
