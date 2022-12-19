@@ -2,9 +2,9 @@ name: build
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
     types: [ opened, synchronize ]
 
 jobs:
@@ -28,11 +28,11 @@ jobs:
       - run: npm test
         env:
           CI: true
-      - name: GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
-        if: matrix.node-version == '16.x' && github.ref == 'refs/heads/master'
-        with:
-          BRANCH: gh-pages
-          FOLDER: target/site/serenity
-          CLEAN: true
+#      - name: GitHub Pages
+#        uses: JamesIves/github-pages-deploy-action@v4.3.3
+#        if: matrix.node-version == '16.x' && github.ref == 'refs/heads/master'
+#        with:
+#          BRANCH: gh-pages
+#          FOLDER: target/site/serenity
+#          CLEAN: true
 
