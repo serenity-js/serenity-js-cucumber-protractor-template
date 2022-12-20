@@ -8,6 +8,7 @@ to get started with acceptance testing your web applications using [Serenity/JS]
 Learn more:
 - [Serenity BDD reports for this project](https://serenity-js.github.io/serenity-js-cucumber-protractor-template/)
 - [Serenity/JS Website](https://serenity-js.org)
+- [Serenity/JS Tutorial](https://serenity-js.org/handbook/thinking-in-serenity-js/index.html)
 - [Serenity/JS API Docs](https://serenity-js.org/modules)
 
 > **Note**
