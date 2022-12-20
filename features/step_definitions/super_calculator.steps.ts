@@ -1,7 +1,7 @@
 /* eslint-disable unicorn/filename-case */
 import { Given, Then, When } from '@cucumber/cucumber';
 import { Ensure, equals } from '@serenity-js/assertions';
-import { Actor, actorCalled, actorInTheSpotlight } from '@serenity-js/core';
+import { Actor } from '@serenity-js/core';
 import { Navigate } from '@serenity-js/web';
 
 import {

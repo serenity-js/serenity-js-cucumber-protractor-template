@@ -1,7 +1,7 @@
 import { Task } from '@serenity-js/core';
+import { Select } from '@serenity-js/web';
 
 import { SuperCalculatorWidget } from './ui';
-import { Select } from '@serenity-js/web';
 
 export const SelectOperator = {
     withSymbol: (symbol: string) =>

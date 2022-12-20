@@ -1,4 +1,4 @@
-import { PageElement, By } from '@serenity-js/web';
+import { By,PageElement } from '@serenity-js/web';
 
 export class SuperCalculatorWidget {
     static leftOperandInput = () =>
