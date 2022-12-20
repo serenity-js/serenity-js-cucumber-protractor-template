@@ -11,6 +11,7 @@
     "test:wip": "failsafe clean test:execute:wip test:report",
     "test:wip:execute": "protractor ./protractor.conf.js --cucumberOpts.tags=@wip",
     "test:report": "serenity-bdd run --features ./features",
+    "start": "mkdirp target/site/serenity && npx http-server -p 8080 target/site/serenity -s -o",
     "lint": "eslint --ext ts --config .eslintrc.js .",
     "lint:fix": "npm run lint -- --fix"
   },
