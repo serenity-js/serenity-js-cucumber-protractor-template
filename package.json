@@ -31,10 +31,10 @@
   "bugs": {
     "url": "https://github.com/serenity-js/serenity-js-cucumber-protractor-template/issues"
   },
-  "homepage": "http://serenity-js.org",
+  "homepage": "https://serenity-js.org",
   "engines": {
     "node": "^12 || ^14 || ^16",
-    "npm": "^6 || ^7 || ^8.0.0"
+    "npm": "^6 || ^7 || ^8"
   },
   "dependencies": {
     "@cucumber/cucumber": "^8.9.1",
