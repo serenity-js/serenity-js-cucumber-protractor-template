@@ -32,9 +32,7 @@ module.exports = {
             'max': 1,
         }],
 
-        '@typescript-eslint/explicit-module-boundary-types': ['error', {
-            'allowHigherOrderFunctions': true
-        }],
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
 
         'indent': 'off',
         '@typescript-eslint/indent': ['error', 4, {
@@ -76,5 +74,11 @@ module.exports = {
         'unicorn/prefer-module': 'off',         // fixme disable when we can provide support for ESM
         'unicorn/prefer-node-protocol': 'off',  // fixme requires Node 14.13 or newer, disable until we no longer have to support Node 12
         'unicorn/prefer-spread': 'off',
+
+        'unicorn/prevent-abbreviations': [ 'error', {
+            'allowList': {
+                'conf': true,
+            }
+        }]
     }
 };

@@ -1,8 +1,8 @@
 /* eslint-disable unicorn/filename-case */
 import { Given, Then, When } from '@cucumber/cucumber';
 import { Ensure, equals } from '@serenity-js/assertions';
-import { actorCalled, actorInTheSpotlight } from '@serenity-js/core';
-import { Navigate } from '@serenity-js/protractor';
+import { Actor, actorCalled, actorInTheSpotlight } from '@serenity-js/core';
+import { Navigate } from '@serenity-js/web';
 
 import {
     CalculationResult,
@@ -10,30 +10,30 @@ import {
     EnterLeftSideOperand,
     EnterRightSideOperand,
     SelectOperator,
-} from '../support';
+} from '../../test';
 
-Given('{word} decides to use the Super Calculator', (actorName: string) =>
-    actorCalled(actorName).attemptsTo(
+Given('{actor} decides to use the Super Calculator', (actor: Actor) =>
+    actor.attemptsTo(
         Navigate.to('/protractor-demo/'),
     ));
 
-When('he/she/they add(s) {int} and {int}', (leftSideOperand: number, rightSideOperand: number) =>
-    actorInTheSpotlight().attemptsTo(
+When('{pronoun} add(s) {int} and {int}', (actor:Actor, leftSideOperand: number, rightSideOperand: number) =>
+    actor.attemptsTo(
         EnterLeftSideOperand.of(leftSideOperand),
         SelectOperator.withSymbol('+'),
         EnterRightSideOperand.of(rightSideOperand),
         ConfirmCalculation(),
     ));
 
-When('he/she/they multiply/multiplies {int} and {int}', (leftSideOperand: number, rightSideOperand: number) =>
-    actorInTheSpotlight().attemptsTo(
+When('{pronoun} multiply/multiplies {int} and {int}', (actor: Actor, leftSideOperand: number, rightSideOperand: number) =>
+    actor.attemptsTo(
         EnterLeftSideOperand.of(leftSideOperand),
         SelectOperator.withSymbol('*'),
         EnterRightSideOperand.of(rightSideOperand),
         ConfirmCalculation(),
     ));
 
-Then('he/she/they should see that the result is {}', (expectedResult: string) =>
-    actorInTheSpotlight().attemptsTo(
+Then('{pronoun} should see that the result is {}', (actor: Actor, expectedResult: string) =>
+    actor.attemptsTo(
         Ensure.that(CalculationResult(), equals(expectedResult)),
     ));
