@@ -1,4 +1,4 @@
-Serenity report generated 23-01-2023 22:43:16
+Serenity report generated 28-01-2023 01:15:05
 2 test scenarios 
 
 Passed:             2
