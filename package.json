@@ -48,8 +48,8 @@
     "protractor": "^7.0.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.1.0",
-    "@typescript-eslint/parser": "^6.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
     "chromedriver": "^114.0.3",
     "eslint": "^8.45.0",
     "eslint-plugin-import": "^2.27.5",
