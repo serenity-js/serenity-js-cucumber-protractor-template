@@ -44,7 +44,7 @@
     "@serenity-js/serenity-bdd": "^3.10.4",
     "@serenity-js/protractor": "^3.10.4",
     "@serenity-js/web": "^3.10.4",
-    "@types/node": "^18.18.1",
+    "@types/node": "^18.18.3",
     "protractor": "^7.0.0"
   },
   "devDependencies": {
