@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
+
+
 <head>
     <meta charset="UTF-8"/>
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Serenity Reports</title>
-
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>Capabilities</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
@@ -110,50 +107,74 @@
 
 
 
-    <script class="code" type="text/javascript">$(document).ready(function () {
+    <script>
 
-            $('.scenario-result-table').DataTable({
-                "order": [[0, "asc",], [3, "asc",]],
-                "pageLength": 10,
+        $(document).ready(function () {
+
+            var scenarioTable = $('.scenario-result-table').DataTable({
+
+                "order": [],
                 "language": {
-                    searchPlaceholder: "Filter",
-                    search: ""
-                },
-                columnDefs: [
-                    {type: 'time-elapsed-dhms', targets: 4}
-                ]
-            });
-
-            // Results table
-            $('#test-results-table').DataTable({
-                "order": [[0, "asc",], [3, "asc",]],
-                "pageLength": 10,
-                "lengthMenu": [[10, 25, 50, 100, 200, -1], [10, 25, 50, 100, 200, "All"]]
-            });
-
-            $('#evidence-table').DataTable({
-                searching: false,
-                paging: false,
-                info: false
-            });
-
-            $(".feature-coverage-table").DataTable({
-                searching: false,
-                paging: false,
-                info: false
-            });
-
-            $(".feature-coverage-table-with-pagination").DataTable({
-                order: [[0, "asc",]],
-                pageLength: 10,
-                language: {
                     searchPlaceholder: "Filter",
                     search: ""
                 }
             });
+
+            $('.example-table table').DataTable({
+                searching: false,
+                ordering: false,
+                paging: false,
+                info: false
+            });
+
+            $('.example-table-in-scenario table').DataTable({
+                searching: false,
+                ordering: false,
+                paging: false,
+                info: false
+            });
+
+            $('#evidence-table').DataTable(
+                {
+                    searching: false,
+                    ordering: false,
+                    paging: false,
+                    info: false
+                }
+            );
+
+
+            $(".scenario-docs .card-body table").wrap("<div class='table-responsive'></div>");
+
+            $("#requirements-tabs").tabs();
+            $("#test-tabs").tabs();
+
+            var requirementsTree = [{"text":"Super Calculator","type":"capability","href":"89801edea975defef64b261caeb5c1071ffafa3eb2e1bb2cb53f0338598b0dcd.html","nodes":[{"text":"Calculations","type":"feature","href":"3b87665f3ed402b3f740f17aa6e7d8d2e8c65d02813d532f06593c39df5e117f.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-check-circle-fill success-icon \u0027 title\u003d\u0027SUCCESS\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e2 scenarios\u003c/span\u003e"]}],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-check-circle-fill success-icon \u0027 title\u003d\u0027SUCCESS\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 feature\u003c/span\u003e"]}];
+
+            $('#tree').treeview({
+                data: requirementsTree,
+                enableLinks: true,
+                levels: 10,
+                showTags: true,
+                expandIcon: "bi bi-journal-plus",
+                collapseIcon: "bi bi-journal-minus",
+                emptyIcon: "bi bi-journal"
+            });
+
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".scenario-docs > div > p").html(function () {
+                var text = $(this).text().trim().split(" ");
+                var first = text.shift();
+                return (text.length > 0 ? "<strong>" + first + "</strong> " : first) + text.join(" ");
+            });
         });
     </script>
 </head>
+
 
 <body class="results-page">
 <div id="topheader">
@@ -168,46 +189,11 @@
     </div>
 </div>
 
+
 <div class="middlecontent">
-
-
     <div id="contenttop">
         <div class="middlebg">
-        <span class="breadcrumbs"><a href="index.html">Home</a>
-                    > Capability 
-                > <span class="truncate-60">
-                Super Calculator
-            </span>
-        </span>
-        </div>
-        <div class="rightbg"></div>
-    </div>
-
-    <div class="clr"></div>
-    <!--/* starts second table*/-->
-<div>
-    <ul class="nav nav-tabs" role="tablist">
-        <li class="active">
-            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
-        </li>
-        <li >
-            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
-        </li>
-        <li >
-            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
-        </li>
-        <li >
-            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
-        </li>
-    </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 09-01-2024 04:35:43</span>
-    <br style="clear:left"/>
-</div>
-    <div class="clr"></div>
-    <div id="beforetable"></div>
-    <div id="results-dashboard">
-        <div class="middlb">
-            <divs">
+            <span class="breadcrumbs">
             <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
 
 
@@ -237,7 +223,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 09-01-2024 04:35</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 09-01-2024 19:07</span>
     <br style="clear:left"/>
 </div>
 
@@ -357,11 +343,11 @@ your thoughts?
                                                                             <a href="3b87665f3ed402b3f740f17aa6e7d8d2e8c65d02813d532f06593c39df5e117f.html">Calculations</a>
                                                                     </td>
                                                                 <td>
-                                                                        <a href="9e32c324a982f97773dd95f427effc3b0982f10231066b86bd40f290c25bafff.html"><span class='context-icon'><i class='fa fa-chrome' aria-hidden='true'></i> <i class='fa fa-linux' aria-hidden='true'></i></span>Adding numbers</a>
+                                                                        <a href="19aaf388e517215f4bbe5d7b03ed8e6a17d506139f0dcc9b8745a57c6367b6fd.html"><span class='context-icon'><i class='fa fa-chrome' aria-hidden='true'></i> <i class='fa fa-linux' aria-hidden='true'></i></span>Adding numbers</a>
                                                                 </td>
                                                                 <td>4</td>
-                                                                <td>04:35:36</td>
-                                                                <td>3s 031ms</td>
+                                                                <td>19:07:30</td>
+                                                                <td>2s 902ms</td>
                                                                 <td>
                                                                         <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                             style="display:none">SUCCESS</span>
@@ -372,11 +358,11 @@ your thoughts?
                                                                             <a href="3b87665f3ed402b3f740f17aa6e7d8d2e8c65d02813d532f06593c39df5e117f.html">Calculations</a>
                                                                     </td>
                                                                 <td>
-                                                                        <a href="5c95080375a5a2a474f2cb7435d5e7410859ad3e083fc8dc06bd197aec786f71.html"><span class='context-icon'><i class='fa fa-chrome' aria-hidden='true'></i> <i class='fa fa-linux' aria-hidden='true'></i></span>Multiplying numbers</a>
+                                                                        <a href="3a0e8984ba624b5134a3d3e16ee28dc9c8ccc298a0a49d82c503d16b0a2de1d0.html"><span class='context-icon'><i class='fa fa-chrome' aria-hidden='true'></i> <i class='fa fa-linux' aria-hidden='true'></i></span>Multiplying numbers</a>
                                                                 </td>
                                                                 <td>4</td>
-                                                                <td>04:35:39</td>
-                                                                <td>2s 603ms</td>
+                                                                <td>19:07:33</td>
+                                                                <td>2s 579ms</td>
                                                                 <td>
                                                                         <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                             style="display:none">SUCCESS</span>
@@ -425,9 +411,9 @@ your thoughts?
                         <div class="card-body">
                                 <h5 class="card-title">Browser</h5>
                             <div>
-                                    <a href="38908ff19b9de2b4d173c404fa86d80b5ff7afb1e4574f9199961549146f4800.html">
+                                    <a href="87f143b93373d68e188e8daa9f2b751d3948a3f39a7d40fa6b860bd0e7502781.html">
                                     <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
-                                        <i class="bi bi-tag-fill"></i> Chrome-Headless-Shell 120.0.6099.109&nbsp;&nbsp;&nbsp;2
+                                        <i class="bi bi-tag-fill"></i> Chrome-Headless-Shell 120.0.6099.199&nbsp;&nbsp;&nbsp;2
                                     </span>
                                     </a>
                             </div>
