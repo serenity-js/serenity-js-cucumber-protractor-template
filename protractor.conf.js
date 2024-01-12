@@ -1,9 +1,3 @@
-const
-    { ConsoleReporter } = require('@serenity-js/console-reporter'),
-    { ArtifactArchiver } = require('@serenity-js/core'),
-    { SerenityBDDReporter } = require('@serenity-js/serenity-bdd'),
-    { Photographer, TakePhotosOfInteractions } = require('@serenity-js/web');
-
 exports.config = {
     baseUrl: 'https://juliemr.github.io/',
 
@@ -22,14 +16,18 @@ exports.config = {
     specs: [ 'features/**/*.feature' ],
 
     serenity: {
+        // Use Cucumber.js test runner adapter
+        // see: https://serenity-js.org/api/cucumber/
         runner: 'cucumber',
+
+        // Configure reporting services
+        // see: https://serenity-js.org/handbook/reporting/
         crew: [
-            // Learn more at https://serenity-js.org/handbook/reporting/index.html
-            ArtifactArchiver.storingArtifactsAt('./target/site/serenity'),
-            ConsoleReporter.forDarkTerminals(),
-            Photographer.whoWill(TakePhotosOfInteractions),     // slower execution, more comprehensive reports
-            // Photographer.whoWill(TakePhotosOfFailures),      // fast execution, screenshots only when tests fail
-            new SerenityBDDReporter(),
+            '@serenity-js/console-reporter',
+            [ '@serenity-js/serenity-bdd', { specDirectory: './features' } ],
+            [ '@serenity-js/web:Photographer',      { strategy: 'TakePhotosOfInteractions'    } ],  // slower execution, more comprehensive reports
+            // [ '@serenity-js/web:Photographer',   { strategy: 'TakePhotosOfFailures'        } ],  // fast execution, screenshots only when tests fail
+            [ '@serenity-js/core:ArtifactArchiver', { outputDirectory: 'target/site/serenity' } ],
         ]
     },
 
