@@ -33,7 +33,7 @@
   },
   "homepage": "https://serenity-js.org",
   "engines": {
-    "node": "^18.12 || ^20"
+    "node": "^18.12 || ^20 || ^22.0.0"
   },
   "dependencies": {
     "@cucumber/cucumber": "^11.0.1",
@@ -44,7 +44,7 @@
     "@serenity-js/serenity-bdd": "^3.29.5",
     "@serenity-js/protractor": "^3.29.5",
     "@serenity-js/web": "^3.29.5",
-    "@types/node": "^20.17.6",
+    "@types/node": "^22.9.1",
     "protractor": "^7.0.0"
   },
   "devDependencies": {
