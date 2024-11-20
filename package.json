@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm run postinstall:chrome && npm run postinstall:chromedriver",
+    "postinstall:chrome": "npx @puppeteer/browsers install chrome@129",
+    "postinstall:chromedriver": "npx @puppeteer/browsers install chromedriver@129",
     "clean": "rimraf target",
     "test": "failsafe clean test:execute test:report",
     "test:execute": "protractor ./protractor.conf.js",
@@ -47,9 +50,9 @@
     "protractor": "^7.0.0"
   },
   "devDependencies": {
+    "@puppeteer/browsers": "^2.4.1",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
-    "chromedriver": "^131.0.0",
     "eslint": "^8.57.1",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",

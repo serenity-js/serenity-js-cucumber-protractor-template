@@ -5,5 +5,9 @@
 node_modules
 *.log
 
+# Browsers
+chrome
+chromedriver
+
 # Build artifacts
 target
