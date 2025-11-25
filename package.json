@@ -38,18 +38,18 @@
     "node": "^20 || ^22 || ^24"
   },
   "dependencies": {
-    "@cucumber/cucumber": "^11.1.1",
-    "@serenity-js/assertions": "^3.31.0",
-    "@serenity-js/console-reporter": "^3.31.0",
-    "@serenity-js/core": "^3.31.0",
-    "@serenity-js/cucumber": "^3.31.0",
-    "@serenity-js/serenity-bdd": "^3.31.0",
-    "@serenity-js/protractor": "^3.31.0",
-    "@serenity-js/web": "^3.31.0",
+    "@cucumber/cucumber": "^12.2.0",
+    "@serenity-js/assertions": "^3.36.1",
+    "@serenity-js/console-reporter": "^3.36.1",
+    "@serenity-js/core": "^3.36.1",
+    "@serenity-js/cucumber": "^3.36.1",
+    "@serenity-js/serenity-bdd": "^3.36.1",
+    "@serenity-js/protractor": "^3.36.1",
+    "@serenity-js/web": "^3.36.1",
     "protractor": "^7.0.0"
   },
   "devDependencies": {
-    "@puppeteer/browsers": "^2.6.1",
+    "@puppeteer/browsers": "^2.10.13",
     "@types/node": "^24.10.1",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
@@ -60,7 +60,7 @@
     "eslint-plugin-unused-imports": "^3.2.0",
     "http-server": "^14.1.1",
     "mkdirp": "^3.0.1",
-    "npm-failsafe": "^1.3.0",
+    "npm-failsafe": "^1.4.0",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
