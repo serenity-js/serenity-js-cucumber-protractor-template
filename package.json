@@ -35,7 +35,7 @@
   },
   "homepage": "https://serenity-js.org",
   "engines": {
-    "node": "^18.12 || ^20 || ^22"
+    "node": "^20 || ^22 || ^24"
   },
   "dependencies": {
     "@cucumber/cucumber": "^11.1.1",
@@ -46,11 +46,11 @@
     "@serenity-js/serenity-bdd": "^3.31.0",
     "@serenity-js/protractor": "^3.31.0",
     "@serenity-js/web": "^3.31.0",
-    "@types/node": "^22.10.2",
     "protractor": "^7.0.0"
   },
   "devDependencies": {
     "@puppeteer/browsers": "^2.6.1",
+    "@types/node": "^24.10.1",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.1",
