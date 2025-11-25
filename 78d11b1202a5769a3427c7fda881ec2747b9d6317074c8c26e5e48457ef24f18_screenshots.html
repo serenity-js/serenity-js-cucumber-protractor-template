@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Screenshots</title>
 
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
@@ -22,17 +22,16 @@
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
 <!-- JQuery -->
-<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<script type="text/javascript" src="scripts/jquery-3.7.1.min.js"></script><!-- Required Stylesheets -->
 <link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
 
 <!-- Required Javascript -->
 <script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/2.3.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/2.3.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/2.3.1/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -69,44 +68,73 @@
     // Register the plugin to all charts:
     Chart.register(ChartDataLabels);
 </script>
-<!-- Nivo Slider -->
-<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
-<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <!-- Swiper.js local styles and script -->
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css" />
+    <script src="swiper/swiper-bundle.min.js"></script>
 
     <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const startIndex = parseInt(urlParams.get("screenshot")) || 0;
 
-        function getUrlVars() {
-            var vars = {};
-            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
-                vars[key] = value;
-            });
-            return vars;
-        }
-
-        var screenshotIndex = getUrlVars()["screenshot"];
-
-        $(window).load(function () {
-            $('#slider').nivoSlider({
-                startSlide: screenshotIndex,
+            new Swiper('.swiper', {
+                initialSlide: startIndex,
                 effect: 'fade',
-                animSpeed: 200,
-                manualAdvance: true
+                speed: 200,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '">' + (index + 1) + "</span>";
+                    },
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+                keyboard: {
+                    enabled: true,
+                    onlyInViewport: true
+                }
             });
-        });
-
-        $(window).keydown(function(e) {
-            switch(e.which) {
-                case 37:
-                    $('a.nivo-prevNav').click();
-                    break;
-                case 39:
-                    $('a.nivo-nextNav').click();
-                    break;
-            }
         });
     </script>
 
+    <style>
+        .swiper {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .swiper-pagination-bullet {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            color: #000;
+            opacity: 1;
+            background: lightgrey;
+        }
+
+        .swiper-pagination-bullet-active {
+            color: #fff;
+            background: #007aff;
+        }
+    </style>
 </head>
 
 <body>
@@ -155,7 +183,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 12-12-2024 18:17</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 25-11-2025 23:45</span>
     <br style="clear:left"/>
 </div>
 
@@ -251,31 +279,57 @@ I'd like to see an example
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
-        <div class="slider-wrapper theme-default">
-            <div id="slider">
-                <img src="photo-linux-chrome-129.0.6668.100-callie-navigates-to-protractor-dem-d21aa76d63.png" title=" Given Callie decides to use the Super Calculator" width="0"/>
-                <img src="photo-linux-chrome-129.0.6668.100-callie-navigates-to-protractor-dem-d21aa76d63.png" title=" Callie navigates to &quot;/protractor-demo/&quot;" width="0"/>
-                <img src="photo-linux-chrome-129.0.6668.100-callie-enters-19-into-left-operand-i-b42567f8a5.png" title=" When she adds 19 and 23" width="0"/>
-                <img src="photo-linux-chrome-129.0.6668.100-callie-enters-19-into-left-operand-i-b42567f8a5.png" title=" Callie enters a left operand of 19" width="0"/>
-                <img src="photo-linux-chrome-129.0.6668.100-callie-enters-19-into-left-operand-i-b42567f8a5.png" title=" Callie enters 19 into left operand input" width="0"/>
-                <img src="photo-linux-chrome-129.0.6668.100-callie-selects-from-operator-dro-8abc0885a0.png" title=" Callie selects the + operator" width="0"/>
-                <img src="photo-linux-chrome-129.0.6668.100-callie-selects-from-operator-dro-8abc0885a0.png" title=" Callie selects &quot;+&quot; from operator dropdown" width="0"/>
-                <img src="photo-linux-chrome-129.0.6668.100-callie-enters-23-into-right-operand-985b17b6e3.png" title=" Callie enters a right operand of 23" width="0"/>
-                <img src="photo-linux-chrome-129.0.6668.100-callie-enters-23-into-right-operand-985b17b6e3.png" title=" Callie enters 23 into right operand input" width="0"/>
-                <img src="photo-linux-chrome-129.0.6668.100-callie-clicks-on-go-button-0a73eb0670.png" title=" Callie confirms calculation" width="0"/>
-                <img src="photo-linux-chrome-129.0.6668.100-callie-clicks-on-go-button-0a73eb0670.png" title=" Callie clicks on &quot;Go&quot; button" width="0"/>
-                <img src="photo-linux-chrome-129.0.6668.100-callie-ensures-that-the-text-of-resu-a9e098f7bf.png" title=" Then she should see that the result is 42" width="0"/>
-
-                <img src="photo-linux-chrome-129.0.6668.100-callie-ensures-that-the-text-of-resu-a9e098f7bf.png" title=" Callie ensures that the text of result does equal "42": <span class='success-color'>SUCCESS</span>" width="0"/>
-            </div>
+    <!-- Swiper Carousel -->
+    <div class="swiper">
+        <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="photo-linux-chrome-129.0.6668.100-callie-navigates-to-protractor-dem-0816e359c0.png" title=" Given Callie decides to use the Super Calculator" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="photo-linux-chrome-129.0.6668.100-callie-navigates-to-protractor-dem-0816e359c0.png" title=" Callie navigates to &amp;quot;/protractor-demo/&amp;quot;" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="photo-linux-chrome-129.0.6668.100-callie-enters-19-into-left-operand-i-91668c2037.png" title=" When she adds 19 and 23" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="photo-linux-chrome-129.0.6668.100-callie-enters-19-into-left-operand-i-91668c2037.png" title=" Callie enters a left operand of 19" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="photo-linux-chrome-129.0.6668.100-callie-enters-19-into-left-operand-i-91668c2037.png" title=" Callie enters 19 into left operand input" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="photo-linux-chrome-129.0.6668.100-callie-selects-from-operator-dro-6dd79df3fd.png" title=" Callie selects the + operator" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="photo-linux-chrome-129.0.6668.100-callie-selects-from-operator-dro-6dd79df3fd.png" title=" Callie selects &amp;quot;+&amp;quot; from operator dropdown" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="photo-linux-chrome-129.0.6668.100-callie-enters-23-into-right-operand-ff6baf2603.png" title=" Callie enters a right operand of 23" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="photo-linux-chrome-129.0.6668.100-callie-enters-23-into-right-operand-ff6baf2603.png" title=" Callie enters 23 into right operand input" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="photo-linux-chrome-129.0.6668.100-callie-clicks-on-go-button-e2ae064d74.png" title=" Callie confirms calculation" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="photo-linux-chrome-129.0.6668.100-callie-clicks-on-go-button-e2ae064d74.png" title=" Callie clicks on &amp;quot;Go&amp;quot; button" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="photo-linux-chrome-129.0.6668.100-callie-ensures-that-the-text-of-resu-83d5b73e99.png" title=" Then she should see that the result is 42" width="0" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="photo-linux-chrome-129.0.6668.100-callie-ensures-that-the-text-of-resu-83d5b73e99.png" title=" Callie ensures that the text of result does equal &quot;42&quot;: <span class='success-color'>SUCCESS</span>" width="0" />
+                </div>
         </div>
-
-
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
     </div>
 </div>
 <div id="beforefooter"></div>
 <div id="bottomfooter">
-    <span class="version">Serenity BDD version 4.1.20</span>
+    <span class="version">Serenity BDD version 4.2.34</span>
 </div>
 </body>
 </html>

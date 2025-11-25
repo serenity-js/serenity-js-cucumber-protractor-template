@@ -27,14 +27,14 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
 <!-- JQuery -->
-<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<script type="text/javascript" src="scripts/jquery-3.7.1.min.js"></script><!-- Required Stylesheets -->
 <link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
 
 <!-- Required Javascript -->
 <script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/2.3.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/2.3.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/2.3.1/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -72,11 +72,11 @@
     Chart.register(ChartDataLabels);
 </script>
 <!-- JQuery-UI -->
-<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
-<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+<link type="text/css" href="jquery-ui/1.14.1/jquery-ui.css" rel="Stylesheet" />
+<script type="text/javascript" src="jquery-ui/1.14.1/jquery-ui.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/2.3.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/2.3.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/2.3.1/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -157,12 +157,6 @@
                     searchPlaceholder: "Filter",
                     search: ""
                 },
-                columnDefs: [
-                    {
-                        targets: 2,
-                        visible: false
-                    },
-                ]
             });
 
             $(".feature-coverage-table-with-pagination").DataTable({
@@ -173,12 +167,6 @@
                     searchPlaceholder: "Filter",
                     search: ""
                 },
-                columnDefs: [
-                    {
-                        targets: 2,
-                        visible: false
-                    },
-                ]
             });
         });
     </script>
@@ -224,7 +212,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 12-12-2024 18:17:47</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 25-11-2025 23:45:19</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -321,7 +309,7 @@
                     <td>
                         <i class="bi bi-flag-fill"></i> Tests Started
                     </td>
-                    <td>Dec 12, 2024 18:17:37</td>
+                    <td>Nov 25, 2025 23:45:11</td>
                 </tr>
                 <tr scope="row">
                     <td>
@@ -384,7 +372,6 @@
                                                                         <tr>
                                                                             <th>Feature</th>
                                                                             <th style="width:1em;">Scenarios</th>
-                                                                            <th style="width:1em;">StepsText</th>
                                                                             <th style="width:1em;">Test&nbsp;Cases</th>
                                                                             <th style="width:1em;">%&nbsp;Pass</th>
                                                                             <th style="width:1em;">Result</th>
@@ -397,35 +384,6 @@
                                                                                             <a href="3b87665f3ed402b3f740f17aa6e7d8d2e8c65d02813d532f06593c39df5e117f.html"> Calculations</a>
                                                                                     </td>
                                                                                     <td>2</td>
-                                                                                    <td>Before
-Given Callie decides to use the Super Calculator
-Callie navigates to "/protractor-demo/"
-When she adds 19 and 23
-Callie enters a left operand of 19
-Callie enters 19 into left operand input
-Callie selects the + operator
-Callie selects "+" from operator dropdown
-Callie enters a right operand of 23
-Callie enters 23 into right operand input
-Callie confirms calculation
-Callie clicks on "Go" button
-Then she should see that the result is 42
-Callie ensures that the text of result does equal "42"
-Before
-Given Callie decides to use the Super Calculator
-Callie navigates to "/protractor-demo/"
-When she multiplies 6 and 2
-Callie enters a left operand of 6
-Callie enters 6 into left operand input
-Callie selects the * operator
-Callie selects "*" from operator dropdown
-Callie enters a right operand of 2
-Callie enters 2 into right operand input
-Callie confirms calculation
-Callie clicks on "Go" button
-Then she should see that the result is 12
-Callie ensures that the text of result does equal "12"
-</td>
                                                                                     <td>2</td>
                                                                                     <td>100%</td>
                                                                                     <td>
@@ -572,7 +530,7 @@ Callie ensures that the text of result does equal "12"
                     <td>
                         <i class="bi bi-flag-fill"></i> Tests Started
                     </td>
-                    <td>Dec 12, 2024 18:17:37</td>
+                    <td>Nov 25, 2025 23:45:11</td>
                     <td>
                         <i class="bi bi-stopwatch"></i> Average
                         Execution Time
@@ -605,7 +563,6 @@ Callie ensures that the text of result does equal "12"
                                                                     <th class="test-name-column">Scenario</th>
                                                                     <th>Context</th>
                                                                     <th>Steps</th>
-                                                                    <th>StepsText</th>
                                                                     <th>Started</th>
                                                                     <th>Total Duration</th>
                                                                     <th>Result</th>
@@ -622,13 +579,8 @@ Callie ensures that the text of result does equal "12"
                                                                         <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-ubuntu' title='Linux'></i></span><span style="display:none">Chrome,linux</span>
                                                                         </td>
                                                                         <td>4</td>
-                                                                        <td>Before
-Given Callie decides to use the Super Calculator
-When she adds 19 and 23
-Then she should see that the result is 42
-</td>
-                                                                        <td data-order="1734027457">18:17:37</td>
-                                                                        <td>2s 620ms</td>
+                                                                        <td data-order="1764114311">23:45:11</td>
+                                                                        <td>2s 901ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
@@ -643,13 +595,8 @@ Then she should see that the result is 42
                                                                         <td><span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-ubuntu' title='Linux'></i></span><span style="display:none">Chrome,linux</span>
                                                                         </td>
                                                                         <td>4</td>
-                                                                        <td>Before
-Given Callie decides to use the Super Calculator
-When she multiplies 6 and 2
-Then she should see that the result is 12
-</td>
-                                                                        <td data-order="1734027460">18:17:40</td>
-                                                                        <td>2s 593ms</td>
+                                                                        <td data-order="1764114313">23:45:13</td>
+                                                                        <td>2s 539ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
                                                                                     style="display:none">SUCCESS</span>
                                                                         </td>
@@ -762,7 +709,7 @@ Then she should see that the result is 12
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <span class="version">Serenity BDD version 4.1.20</span>
+            <span class="version">Serenity BDD version 4.2.34</span>
         </div>
     </div>
 </div>
