@@ -3,7 +3,7 @@ const { resolve } = require('path')
 
 // Chrome 129 is the last version that correctly supports Selenium 3
 // Chrome 130 and later require Selenium 4 for browser.executeScript to correctly resolve WebElement arguments
-const chromeVersion = '142';
+const chromeVersion = '129';
 
 const binaries = {
     chromedriver: computeExecutablePath({ browser: 'chromedriver', buildId: chromeVersion, cacheDir: '.' }),
@@ -85,6 +85,11 @@ exports.config = {
                 '--headless',
                 '--disable-gpu',
                 '--window-size=1024x768',
+                // Additional flags for CI environments (GitHub Actions, etc.)
+                '--no-sandbox',                     // Required for running as root in Docker/CI
+                '--disable-dev-shm-usage',          // Overcome limited resource problems
+                '--disable-setuid-sandbox',         // Additional sandbox disabling for CI
+                '--remote-debugging-port=9222',     // Helps with DevToolsActivePort issues
             ]
         }
     }
