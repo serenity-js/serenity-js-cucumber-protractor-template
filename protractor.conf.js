@@ -3,7 +3,7 @@ const { resolve } = require('path')
 
 // Chrome 129 is the last version that correctly supports Selenium 3
 // Chrome 130 and later require Selenium 4 for browser.executeScript to correctly resolve WebElement arguments
-const chromeVersion = '142';
+const chromeVersion = '129';
 
 const binaries = {
     chromedriver: computeExecutablePath({ browser: 'chromedriver', buildId: chromeVersion, cacheDir: '.' }),
@@ -18,7 +18,6 @@ exports.config = {
     directConnect: true,
 
     chromeDriver: binaries.chromedriver,
-    chromeDriverArgs: ['--verbose'],
 
     // https://github.com/angular/protractor/blob/master/docs/timeouts.md
     allScriptsTimeout: 110000,
@@ -57,6 +56,37 @@ exports.config = {
     },
 
     /**
+     * Hook to enable ChromeDriver verbose logging
+     */
+    beforeLaunch: function() {
+        // Enable verbose ChromeDriver logging to stderr/stdout
+        process.env.SELENIUM_VERBOSE = 'true';
+        process.env.CHROMEDRIVER_VERBOSE = '1';
+    },
+
+    /**
+     * Hook to print driver logs after tests complete
+     */
+    onComplete: async function() {
+        try {
+            const logs = await browser.manage().logs().get('driver');
+            if (logs && logs.length > 0) {
+                console.log('\n' + '='.repeat(80));
+                console.log('ChromeDriver Logs:');
+                console.log('='.repeat(80));
+                logs.forEach(function(entry) {
+                    console.log('[%s] %s - %s', entry.level.name, new Date(entry.timestamp).toISOString(), entry.message);
+                });
+                console.log('='.repeat(80) + '\n');
+            } else {
+                console.log('\nNo ChromeDriver logs available');
+            }
+        } catch (e) {
+            console.log('\nCould not retrieve ChromeDriver logs:', e.message);
+        }
+    },
+
+    /**
      * If you're interacting with a non-Angular application,
      * uncomment the below onPrepare section,
      * which disables Angular-specific test synchronisation.
@@ -71,7 +101,8 @@ exports.config = {
         // see https://github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities#loggingpreferences-json-object
         loggingPrefs: {
             // browser: 'SEVERE' // "OFF", "SEVERE", "WARNING", "INFO", "CONFIG", "FINE", "FINER", "FINEST", "ALL".
-            browser: 'ALL' // "OFF", "SEVERE", "WARNING", "INFO", "CONFIG", "FINE", "FINER", "FINEST", "ALL".
+            browser: 'ALL', // "OFF", "SEVERE", "WARNING", "INFO", "CONFIG", "FINE", "FINER", "FINEST", "ALL".
+            driver: 'ALL'   // Enable ChromeDriver logging
         },
 
         chromeOptions: {
