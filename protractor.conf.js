@@ -56,37 +56,6 @@ exports.config = {
     },
 
     /**
-     * Hook to enable ChromeDriver verbose logging
-     */
-    beforeLaunch: function() {
-        // Enable verbose ChromeDriver logging to stderr/stdout
-        process.env.SELENIUM_VERBOSE = 'true';
-        process.env.CHROMEDRIVER_VERBOSE = '1';
-    },
-
-    /**
-     * Hook to print driver logs after tests complete
-     */
-    onComplete: async function() {
-        try {
-            const logs = await browser.manage().logs().get('driver');
-            if (logs && logs.length > 0) {
-                console.log('\n' + '='.repeat(80));
-                console.log('ChromeDriver Logs:');
-                console.log('='.repeat(80));
-                logs.forEach(function(entry) {
-                    console.log('[%s] %s - %s', entry.level.name, new Date(entry.timestamp).toISOString(), entry.message);
-                });
-                console.log('='.repeat(80) + '\n');
-            } else {
-                console.log('\nNo ChromeDriver logs available');
-            }
-        } catch (e) {
-            console.log('\nCould not retrieve ChromeDriver logs:', e.message);
-        }
-    },
-
-    /**
      * If you're interacting with a non-Angular application,
      * uncomment the below onPrepare section,
      * which disables Angular-specific test synchronisation.
