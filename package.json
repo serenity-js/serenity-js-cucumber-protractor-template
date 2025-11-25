@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "npm run postinstall:chrome && npm run postinstall:chromedriver",
-    "postinstall:chrome": "npx @puppeteer/browsers install chrome@129",
-    "postinstall:chromedriver": "npx @puppeteer/browsers install chromedriver@129",
+    "postinstall:chrome": "npx @puppeteer/browsers install chrome@142",
+    "postinstall:chromedriver": "npx @puppeteer/browsers install chromedriver@142",
     "clean": "rimraf target",
     "test": "failsafe clean test:execute test:report",
     "test:execute": "protractor ./protractor.conf.js",

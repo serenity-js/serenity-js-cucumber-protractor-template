@@ -3,7 +3,7 @@ const { resolve } = require('path')
 
 // Chrome 129 is the last version that correctly supports Selenium 3
 // Chrome 130 and later require Selenium 4 for browser.executeScript to correctly resolve WebElement arguments
-const chromeVersion = '129';
+const chromeVersion = '142';
 
 const binaries = {
     chromedriver: computeExecutablePath({ browser: 'chromedriver', buildId: chromeVersion, cacheDir: '.' }),
