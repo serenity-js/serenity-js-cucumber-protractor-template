@@ -18,6 +18,7 @@ exports.config = {
     directConnect: true,
 
     chromeDriver: binaries.chromedriver,
+    chromeDriverArgs: ['--verbose'],
 
     // https://github.com/angular/protractor/blob/master/docs/timeouts.md
     allScriptsTimeout: 110000,
@@ -69,7 +70,8 @@ exports.config = {
 
         // see https://github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities#loggingpreferences-json-object
         loggingPrefs: {
-            browser: 'SEVERE' // "OFF", "SEVERE", "WARNING", "INFO", "CONFIG", "FINE", "FINER", "FINEST", "ALL".
+            // browser: 'SEVERE' // "OFF", "SEVERE", "WARNING", "INFO", "CONFIG", "FINE", "FINER", "FINEST", "ALL".
+            browser: 'ALL' // "OFF", "SEVERE", "WARNING", "INFO", "CONFIG", "FINE", "FINER", "FINEST", "ALL".
         },
 
         chromeOptions: {
