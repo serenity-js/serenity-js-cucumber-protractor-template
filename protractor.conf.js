@@ -118,6 +118,11 @@ exports.config = {
                 '--headless',
                 '--disable-gpu',
                 '--window-size=1024x768',
+                // Additional flags for CI environments (GitHub Actions, etc.)
+                '--no-sandbox',                     // Required for running as root in Docker/CI
+                '--disable-dev-shm-usage',          // Overcome limited resource problems
+                '--disable-setuid-sandbox',         // Additional sandbox disabling for CI
+                '--remote-debugging-port=9222',     // Helps with DevToolsActivePort issues
             ]
         }
     }
