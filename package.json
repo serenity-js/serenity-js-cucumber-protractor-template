@@ -49,7 +49,7 @@
     "protractor": "^7.0.0"
   },
   "devDependencies": {
-    "@puppeteer/browsers": "^2.10.13",
+    "@puppeteer/browsers": "^2.11.0",
     "@types/node": "^24.10.1",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
