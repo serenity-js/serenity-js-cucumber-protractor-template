@@ -12,12 +12,12 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/serenity-js/playwright:v1.56.1-noble
+      image: ghcr.io/serenity-js/playwright:v1.57.0-noble
     steps:
-      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
       - uses: actions/setup-node@v6
         with:
-          node-version: '24.11.1'
+          node-version: '24.12.0'
       - name: Setup Node Modules
         uses: bahmutov/npm-install@v1
         env:
@@ -26,7 +26,7 @@ jobs:
         run: npm run lint
       - name: Run tests
         run: npm test
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v6
         if: always()
         with:
           name: serenity-report
@@ -35,7 +35,7 @@ jobs:
 
       - name: GitHub Pages
         if: github.ref == 'refs/heads/main'
-        uses: JamesIves/github-pages-deploy-action@v4.7.4
+        uses: JamesIves/github-pages-deploy-action@v4.7.6
         with:
           branch: gh-pages
           folder: target/site/serenity
