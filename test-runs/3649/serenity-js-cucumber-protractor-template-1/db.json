@@ -1,0 +1,780 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-08-18T15:01:46.857Z",
+  "finishedAt": "2026-08-18T15:01:52.423Z",
+  "outcomes": {
+    "passed": 2,
+    "failed": 0,
+    "pending": 0,
+    "skipped": 0,
+    "compromised": 0,
+    "error": 0
+  },
+  "scenes": [
+    {
+      "name": "Adding numbers",
+      "category": "Calculations",
+      "outcome": {
+        "code": 64
+      },
+      "duration": 2909,
+      "startedAt": "2026-08-18T15:01:46.857Z",
+      "source": {
+        "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/features/super_calculator/calculations.feature",
+        "line": 12
+      },
+      "tags": [
+        {
+          "type": "capability",
+          "name": "Super calculator"
+        },
+        {
+          "type": "feature",
+          "name": "Calculations"
+        },
+        {
+          "type": "tag",
+          "name": "important"
+        },
+        {
+          "type": "tag",
+          "name": "smoke"
+        },
+        {
+          "type": "browser",
+          "name": "chrome 129.0.6668.100"
+        },
+        {
+          "type": "platform",
+          "name": "Linux"
+        },
+        {
+          "type": "module",
+          "name": "serenity-js-cucumber-protractor-template"
+        }
+      ],
+      "activities": [
+        {
+          "type": "Task",
+          "name": "Before",
+          "outcome": {
+            "code": 64
+          },
+          "duration": 2,
+          "startedAt": "2026-08-18T15:01:46.860Z",
+          "children": [],
+          "location": {
+            "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/features/support/serenity.config.ts",
+            "line": 6
+          }
+        },
+        {
+          "type": "Task",
+          "name": "Given Callie decides to use the Super Calculator",
+          "outcome": {
+            "code": 64
+          },
+          "duration": 433,
+          "startedAt": "2026-08-18T15:01:46.863Z",
+          "children": [
+            {
+              "type": "Interaction",
+              "name": "Callie navigates to \"/protractor-demo/\"",
+              "outcome": {
+                "code": 64
+              },
+              "duration": 361,
+              "startedAt": "2026-08-18T15:01:46.873Z",
+              "children": [],
+              "location": {
+                "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/node_modules/@serenity-js/cucumber/src/adapter/CucumberCLIAdapter.ts",
+                "line": 171,
+                "column": 33
+              },
+              "artifacts": [
+                {
+                  "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-navigates-to---protractor-dem-0816e359c0.png",
+                  "type": "screenshot"
+                }
+              ]
+            }
+          ],
+          "location": {
+            "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/features/super_calculator/calculations.feature",
+            "line": 9
+          }
+        },
+        {
+          "type": "Task",
+          "name": "When she adds 19 and 23",
+          "outcome": {
+            "code": 64
+          },
+          "duration": 653,
+          "startedAt": "2026-08-18T15:01:47.296Z",
+          "children": [
+            {
+              "type": "Task",
+              "name": "Callie enters a left operand of 19",
+              "outcome": {
+                "code": 64
+              },
+              "duration": 147,
+              "startedAt": "2026-08-18T15:01:47.316Z",
+              "children": [
+                {
+                  "type": "Interaction",
+                  "name": "Callie enters 19 into left operand input",
+                  "outcome": {
+                    "code": 64
+                  },
+                  "duration": 75,
+                  "startedAt": "2026-08-18T15:01:47.317Z",
+                  "children": [],
+                  "location": {
+                    "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/test/super-calculator/EnterLeftSideOperand.ts",
+                    "line": 10,
+                    "column": 35
+                  },
+                  "artifacts": [
+                    {
+                      "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-enters-19-into-left-operand-i-91668c2037.png",
+                      "type": "screenshot"
+                    }
+                  ]
+                }
+              ],
+              "location": {
+                "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/features/step_definitions/super_calculator.steps.ts",
+                "line": 22,
+                "column": 30
+              }
+            },
+            {
+              "type": "Task",
+              "name": "Callie selects the + operator",
+              "outcome": {
+                "code": 64
+              },
+              "duration": 139,
+              "startedAt": "2026-08-18T15:01:47.473Z",
+              "children": [
+                {
+                  "type": "Interaction",
+                  "name": "Callie selects \"+\" from operator dropdown",
+                  "outcome": {
+                    "code": 64
+                  },
+                  "duration": 56,
+                  "startedAt": "2026-08-18T15:01:47.474Z",
+                  "children": [],
+                  "location": {
+                    "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/test/super-calculator/SelectOperator.ts",
+                    "line": 9,
+                    "column": 35
+                  },
+                  "artifacts": [
+                    {
+                      "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-selects-----from-operator-dro-c1330057c0.png",
+                      "type": "screenshot"
+                    }
+                  ]
+                }
+              ],
+              "location": {
+                "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/features/step_definitions/super_calculator.steps.ts",
+                "line": 23,
+                "column": 24
+              }
+            },
+            {
+              "type": "Task",
+              "name": "Callie enters a right operand of 23",
+              "outcome": {
+                "code": 64
+              },
+              "duration": 153,
+              "startedAt": "2026-08-18T15:01:47.623Z",
+              "children": [
+                {
+                  "type": "Interaction",
+                  "name": "Callie enters 23 into right operand input",
+                  "outcome": {
+                    "code": 64
+                  },
+                  "duration": 60,
+                  "startedAt": "2026-08-18T15:01:47.623Z",
+                  "children": [],
+                  "location": {
+                    "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/test/super-calculator/EnterRightSideOperand.ts",
+                    "line": 10,
+                    "column": 35
+                  },
+                  "artifacts": [
+                    {
+                      "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-enters-23-into-right-operand--5795a176f2.png",
+                      "type": "screenshot"
+                    }
+                  ]
+                }
+              ],
+              "location": {
+                "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/features/step_definitions/super_calculator.steps.ts",
+                "line": 24,
+                "column": 31
+              }
+            },
+            {
+              "type": "Task",
+              "name": "Callie confirms calculation",
+              "outcome": {
+                "code": 64
+              },
+              "duration": 152,
+              "startedAt": "2026-08-18T15:01:47.786Z",
+              "children": [
+                {
+                  "type": "Interaction",
+                  "name": "Callie clicks on \"Go\" button",
+                  "outcome": {
+                    "code": 64
+                  },
+                  "duration": 80,
+                  "startedAt": "2026-08-18T15:01:47.786Z",
+                  "children": [],
+                  "location": {
+                    "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/test/super-calculator/ConfirmCalculation.ts",
+                    "line": 8,
+                    "column": 15
+                  },
+                  "artifacts": [
+                    {
+                      "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-clicks-on--go--button-b22f984455.png",
+                      "type": "screenshot"
+                    }
+                  ]
+                }
+              ],
+              "location": {
+                "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/features/step_definitions/super_calculator.steps.ts",
+                "line": 25,
+                "column": 27
+              }
+            }
+          ],
+          "location": {
+            "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/features/super_calculator/calculations.feature",
+            "line": 20
+          }
+        },
+        {
+          "type": "Task",
+          "name": "Then she should see that the result is 42",
+          "outcome": {
+            "code": 64
+          },
+          "duration": 1805,
+          "startedAt": "2026-08-18T15:01:47.949Z",
+          "children": [
+            {
+              "type": "Interaction",
+              "name": "Callie ensures that the text of result does equal \"42\"",
+              "outcome": {
+                "code": 64
+              },
+              "duration": 1747,
+              "startedAt": "2026-08-18T15:01:47.956Z",
+              "children": [],
+              "location": {
+                "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/node_modules/@serenity-js/cucumber/src/adapter/CucumberCLIAdapter.ts",
+                "line": 135,
+                "column": 16
+              },
+              "artifacts": [
+                {
+                  "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-ensures-that-the-text-of-resu-907f626030.png",
+                  "type": "screenshot"
+                }
+              ]
+            }
+          ],
+          "location": {
+            "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/features/super_calculator/calculations.feature",
+            "line": 21
+          }
+        }
+      ],
+      "narrative": "In order to learn how to use Serenity/JS with Cucumber and Protractor\nAs a Curious Developer\nI'd like to see an example",
+      "description": "The [\"Super Calculator\"](https://juliemr.github.io/protractor-demo/) was developed by Julie Ralph,\nthe author of Protractor, to demonstrate what Protractor is capable of.\n\nBy the way, did you notice that with **Serenity/JS** you can use [Markdown](https://en.wikipedia.org/wiki/Markdown)\nto better describe each `Feature` and `Scenario`?",
+      "artifacts": [
+        {
+          "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-navigates-to---protractor-dem-0816e359c0.png",
+          "type": "screenshot",
+          "activityId": "qa8c3d2frvzigxr4yi1epqib"
+        },
+        {
+          "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-enters-19-into-left-operand-i-91668c2037.png",
+          "type": "screenshot",
+          "activityId": "rug3f15q1kcbo5gvaa21s45d"
+        },
+        {
+          "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-selects-----from-operator-dro-c1330057c0.png",
+          "type": "screenshot",
+          "activityId": "eneqy05nfx0fri6319ih0xde"
+        },
+        {
+          "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-enters-23-into-right-operand--5795a176f2.png",
+          "type": "screenshot",
+          "activityId": "lkwt75o8nun8c61a32xu536n"
+        },
+        {
+          "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-clicks-on--go--button-b22f984455.png",
+          "type": "screenshot",
+          "activityId": "kpg06b9rqevp4bacubam5atb"
+        },
+        {
+          "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-ensures-that-the-text-of-resu-907f626030.png",
+          "type": "screenshot",
+          "activityId": "vqsxjcouno5c99u62x24d84h"
+        }
+      ],
+      "cast": [
+        {
+          "name": "Callie",
+          "abilities": [
+            {
+              "name": "PerformActivities"
+            },
+            {
+              "name": "AnswerQuestions"
+            },
+            {
+              "name": "RaiseErrors"
+            },
+            {
+              "name": "ScheduleWork",
+              "details": "{\"scheduler\":{\"clock\":{\"timeAdjustment\":{\"milliseconds\":0}},\"interactionTimeout\":{\"milliseconds\":5000}}}"
+            },
+            {
+              "name": "BrowseTheWebWithProtractor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Multiplying numbers",
+      "category": "Calculations",
+      "outcome": {
+        "code": 64
+      },
+      "duration": 2651,
+      "startedAt": "2026-08-18T15:01:49.772Z",
+      "source": {
+        "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/features/super_calculator/calculations.feature",
+        "line": 24
+      },
+      "tags": [
+        {
+          "type": "capability",
+          "name": "Super calculator"
+        },
+        {
+          "type": "feature",
+          "name": "Calculations"
+        },
+        {
+          "type": "tag",
+          "name": "fast"
+        },
+        {
+          "type": "tag",
+          "name": "smoke"
+        },
+        {
+          "type": "browser",
+          "name": "chrome 129.0.6668.100"
+        },
+        {
+          "type": "platform",
+          "name": "Linux"
+        },
+        {
+          "type": "module",
+          "name": "serenity-js-cucumber-protractor-template"
+        }
+      ],
+      "activities": [
+        {
+          "type": "Task",
+          "name": "Before",
+          "outcome": {
+            "code": 64
+          },
+          "duration": 0,
+          "startedAt": "2026-08-18T15:01:49.773Z",
+          "children": [],
+          "location": {
+            "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/features/support/serenity.config.ts",
+            "line": 6
+          }
+        },
+        {
+          "type": "Task",
+          "name": "Given Callie decides to use the Super Calculator",
+          "outcome": {
+            "code": 64
+          },
+          "duration": 212,
+          "startedAt": "2026-08-18T15:01:49.774Z",
+          "children": [
+            {
+              "type": "Interaction",
+              "name": "Callie navigates to \"/protractor-demo/\"",
+              "outcome": {
+                "code": 64
+              },
+              "duration": 139,
+              "startedAt": "2026-08-18T15:01:49.775Z",
+              "children": [],
+              "location": {
+                "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/node_modules/@serenity-js/cucumber/src/adapter/CucumberCLIAdapter.ts",
+                "line": 171,
+                "column": 33
+              },
+              "artifacts": [
+                {
+                  "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-navigates-to---protractor-dem-0816e359c0.png",
+                  "type": "screenshot"
+                }
+              ]
+            }
+          ],
+          "location": {
+            "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/features/super_calculator/calculations.feature",
+            "line": 9
+          }
+        },
+        {
+          "type": "Task",
+          "name": "When she multiplies 6 and 2",
+          "outcome": {
+            "code": 64
+          },
+          "duration": 597,
+          "startedAt": "2026-08-18T15:01:49.986Z",
+          "children": [
+            {
+              "type": "Task",
+              "name": "Callie enters a left operand of 6",
+              "outcome": {
+                "code": 64
+              },
+              "duration": 190,
+              "startedAt": "2026-08-18T15:01:49.998Z",
+              "children": [
+                {
+                  "type": "Interaction",
+                  "name": "Callie enters 6 into left operand input",
+                  "outcome": {
+                    "code": 64
+                  },
+                  "duration": 138,
+                  "startedAt": "2026-08-18T15:01:49.998Z",
+                  "children": [],
+                  "location": {
+                    "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/test/super-calculator/EnterLeftSideOperand.ts",
+                    "line": 10,
+                    "column": 35
+                  },
+                  "artifacts": [
+                    {
+                      "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-enters-6-into-left-operand-in-120521bd59.png",
+                      "type": "screenshot"
+                    }
+                  ]
+                }
+              ],
+              "location": {
+                "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/features/step_definitions/super_calculator.steps.ts",
+                "line": 30,
+                "column": 30
+              }
+            },
+            {
+              "type": "Task",
+              "name": "Callie selects the * operator",
+              "outcome": {
+                "code": 64
+              },
+              "duration": 112,
+              "startedAt": "2026-08-18T15:01:50.198Z",
+              "children": [
+                {
+                  "type": "Interaction",
+                  "name": "Callie selects \"*\" from operator dropdown",
+                  "outcome": {
+                    "code": 64
+                  },
+                  "duration": 51,
+                  "startedAt": "2026-08-18T15:01:50.198Z",
+                  "children": [],
+                  "location": {
+                    "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/test/super-calculator/SelectOperator.ts",
+                    "line": 9,
+                    "column": 35
+                  },
+                  "artifacts": [
+                    {
+                      "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-selects-----from-operator-dro-dfc9988845.png",
+                      "type": "screenshot"
+                    }
+                  ]
+                }
+              ],
+              "location": {
+                "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/features/step_definitions/super_calculator.steps.ts",
+                "line": 31,
+                "column": 24
+              }
+            },
+            {
+              "type": "Task",
+              "name": "Callie enters a right operand of 2",
+              "outcome": {
+                "code": 64
+              },
+              "duration": 107,
+              "startedAt": "2026-08-18T15:01:50.321Z",
+              "children": [
+                {
+                  "type": "Interaction",
+                  "name": "Callie enters 2 into right operand input",
+                  "outcome": {
+                    "code": 64
+                  },
+                  "duration": 57,
+                  "startedAt": "2026-08-18T15:01:50.321Z",
+                  "children": [],
+                  "location": {
+                    "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/test/super-calculator/EnterRightSideOperand.ts",
+                    "line": 10,
+                    "column": 35
+                  },
+                  "artifacts": [
+                    {
+                      "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-enters-2-into-right-operand-i-885c9bc7a8.png",
+                      "type": "screenshot"
+                    }
+                  ]
+                }
+              ],
+              "location": {
+                "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/features/step_definitions/super_calculator.steps.ts",
+                "line": 32,
+                "column": 31
+              }
+            },
+            {
+              "type": "Task",
+              "name": "Callie confirms calculation",
+              "outcome": {
+                "code": 64
+              },
+              "duration": 133,
+              "startedAt": "2026-08-18T15:01:50.439Z",
+              "children": [
+                {
+                  "type": "Interaction",
+                  "name": "Callie clicks on \"Go\" button",
+                  "outcome": {
+                    "code": 64
+                  },
+                  "duration": 82,
+                  "startedAt": "2026-08-18T15:01:50.439Z",
+                  "children": [],
+                  "location": {
+                    "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/test/super-calculator/ConfirmCalculation.ts",
+                    "line": 8,
+                    "column": 15
+                  },
+                  "artifacts": [
+                    {
+                      "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-clicks-on--go--button-8e8356c87c.png",
+                      "type": "screenshot"
+                    }
+                  ]
+                }
+              ],
+              "location": {
+                "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/features/step_definitions/super_calculator.steps.ts",
+                "line": 33,
+                "column": 27
+              }
+            }
+          ],
+          "location": {
+            "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/features/super_calculator/calculations.feature",
+            "line": 26
+          }
+        },
+        {
+          "type": "Task",
+          "name": "Then she should see that the result is 12",
+          "outcome": {
+            "code": 64
+          },
+          "duration": 1829,
+          "startedAt": "2026-08-18T15:01:50.583Z",
+          "children": [
+            {
+              "type": "Interaction",
+              "name": "Callie ensures that the text of result does equal \"12\"",
+              "outcome": {
+                "code": 64
+              },
+              "duration": 1773,
+              "startedAt": "2026-08-18T15:01:50.588Z",
+              "children": [],
+              "location": {
+                "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/node_modules/@serenity-js/cucumber/src/adapter/CucumberCLIAdapter.ts",
+                "line": 135,
+                "column": 16
+              },
+              "artifacts": [
+                {
+                  "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-ensures-that-the-text-of-resu-67c174d566.png",
+                  "type": "screenshot"
+                }
+              ]
+            }
+          ],
+          "location": {
+            "path": "/__w/serenity-js-cucumber-protractor-template/serenity-js-cucumber-protractor-template/features/super_calculator/calculations.feature",
+            "line": 27
+          }
+        }
+      ],
+      "narrative": "In order to learn how to use Serenity/JS with Cucumber and Protractor\nAs a Curious Developer\nI'd like to see an example",
+      "artifacts": [
+        {
+          "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-navigates-to---protractor-dem-0816e359c0.png",
+          "type": "screenshot",
+          "activityId": "en26o35ketj4u9r8yicvwy1l"
+        },
+        {
+          "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-enters-6-into-left-operand-in-120521bd59.png",
+          "type": "screenshot",
+          "activityId": "wg22nejw7vv2k1elluxepl3a"
+        },
+        {
+          "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-selects-----from-operator-dro-dfc9988845.png",
+          "type": "screenshot",
+          "activityId": "kt1tpfnal28nsiku5vzr5q80"
+        },
+        {
+          "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-enters-2-into-right-operand-i-885c9bc7a8.png",
+          "type": "screenshot",
+          "activityId": "f8rwbtzgczs8be0ehft3hdoy"
+        },
+        {
+          "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-clicks-on--go--button-8e8356c87c.png",
+          "type": "screenshot",
+          "activityId": "nkdicp83yrtme0wgy5l1drcq"
+        },
+        {
+          "path": "test-runs/3649/serenity-js-cucumber-protractor-template-1/screenshot-linux-chrome-129-0-6668-100-callie-ensures-that-the-text-of-resu-67c174d566.png",
+          "type": "screenshot",
+          "activityId": "ohufkulk1ikwdjycb1ot7sv9"
+        }
+      ],
+      "cast": [
+        {
+          "name": "Callie",
+          "abilities": [
+            {
+              "name": "PerformActivities"
+            },
+            {
+              "name": "AnswerQuestions"
+            },
+            {
+              "name": "RaiseErrors"
+            },
+            {
+              "name": "ScheduleWork",
+              "details": "{\"scheduler\":{\"clock\":{\"timeAdjustment\":{\"milliseconds\":0}},\"interactionTimeout\":{\"milliseconds\":5000}}}"
+            },
+            {
+              "name": "BrowseTheWebWithProtractor"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tags": [
+    {
+      "type": "capability",
+      "name": "Super calculator"
+    },
+    {
+      "type": "feature",
+      "name": "Calculations"
+    },
+    {
+      "type": "tag",
+      "name": "important"
+    },
+    {
+      "type": "tag",
+      "name": "smoke"
+    },
+    {
+      "type": "browser",
+      "name": "chrome 129.0.6668.100"
+    },
+    {
+      "type": "platform",
+      "name": "Linux"
+    },
+    {
+      "type": "module",
+      "name": "serenity-js-cucumber-protractor-template"
+    },
+    {
+      "type": "tag",
+      "name": "fast"
+    }
+  ],
+  "testRunner": {
+    "name": "Cucumber",
+    "version": "13.2.1"
+  },
+  "systemContext": {
+    "nodeVersion": "v24.19.0",
+    "os": {
+      "name": "linux",
+      "version": "6.17.0-1022-azure",
+      "arch": "x64"
+    },
+    "serenityVersion": "3.45.7",
+    "runtime": {
+      "provider": "GitHub Actions",
+      "buildNumber": "3649",
+      "branch": "main",
+      "commit": "2b413813af19ce61fe2f13f30440d0870cb1f7f8",
+      "commitMessage": "Merge pull request #1415 from serenity-js/chore/migrate-to-html-reporter",
+      "commitAuthor": "Jan Molak",
+      "jobUrl": "https://github.com/serenity-js/serenity-js-cucumber-protractor-template/actions/runs/32151758074",
+      "workflow": "build",
+      "repositoryUrl": "https://github.com/serenity-js/serenity-js-cucumber-protractor-template",
+      "triggeredBy": "jan-molak"
+    },
+    "projectName": "@serenity-js/serenity-js-cucumber-protractor-template",
+    "packageManager": "npm"
+  },
+  "testRunId": "3649",
+  "moduleId": "serenity-js-cucumber-protractor-template",
+  "attempt": 1
+}

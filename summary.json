@@ -1,0 +1,51 @@
+{
+  "$schema": "https://serenity-js.org/schemas/report-summary.json",
+  "generated": "2026-08-18T15:01:52.455Z",
+  "title": "Cucumber",
+  "schemaVersion": 1,
+  "reportUrl": "./index.html",
+  "ci": {
+    "commit": "2b413813af19ce61fe2f13f30440d0870cb1f7f8",
+    "branch": "main",
+    "jobUrl": "https://github.com/serenity-js/serenity-js-cucumber-protractor-template/actions/runs/32151758074"
+  },
+  "latestRun": {
+    "timestamp": "2026-08-18T15:01:46.857Z",
+    "label": "3649",
+    "totals": {
+      "passed": 2,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "compromised": 0,
+      "error": 0
+    },
+    "duration": 5566
+  },
+  "runs": 1,
+  "failureClusters": [],
+  "consistency": {
+    "flaky": [],
+    "inconsistent": [],
+    "degraded": [],
+    "recovered": []
+  },
+  "scores": {
+    "passRate": 100,
+    "completeness": 100,
+    "consistency": 100,
+    "confidence": 100
+  },
+  "slowest": [
+    {
+      "name": "Adding numbers",
+      "source": "super_calculator/calculations.feature:12",
+      "duration": 2909
+    },
+    {
+      "name": "Multiplying numbers",
+      "source": "super_calculator/calculations.feature:24",
+      "duration": 2651
+    }
+  ]
+}
