@@ -10,4 +10,4 @@ chrome
 chromedriver
 
 # Build artifacts
-target
+reports/
